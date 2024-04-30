@@ -169,3 +169,7 @@
 .flex-between {
   @apply flex justify-between items-center;
 }
+
+.btn-hover {
+  @apply bg-zinc-800 text-zinc-100
+}
