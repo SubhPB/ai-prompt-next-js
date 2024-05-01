@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-function page() {
+function Home() {
   return (
     <section className='w-full flex flex-center flex-col'>
 
@@ -19,4 +19,4 @@ function page() {
   )
 }
 
-export default page
+export default Home

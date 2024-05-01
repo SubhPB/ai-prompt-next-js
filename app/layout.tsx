@@ -1,5 +1,10 @@
+//  Byimaan
+
 import type { Metadata } from "next";
 import '@styles/globals.css';
+import Nav from "@components/Nav";
+import Provider from "@components/Provider";
+
 
 export const metadata: Metadata = {
   title: "AI prompts",
@@ -15,15 +20,20 @@ export default function RootLayout({
     <html lang="en">
       
       <body className="app-body">
-        
-        <div className="main">
-          <div className="gradient">  </div>
-        </div>
+        <Provider>
 
-        <main className="app">
-          {children}
-        </main>
+          <div className="main">
+            <div className="gradient">  </div>
+          </div>
 
+          <main className="app">
+
+            <Nav/>
+            {children}
+
+          </main>
+
+        </Provider>
       </body>
 
     </html>
