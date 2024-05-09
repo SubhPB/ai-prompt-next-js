@@ -1,6 +1,8 @@
 // Byimaan
 
-import NextAuth from "next-auth/next"
-import Google from "next-auth/providers/google"
+import NextAuth from "next-auth/next";
+import { authOptions } from "./authOptions";
 
-export default ''
+const handler = NextAuth(authOptions);
+
+export {handler as GET, handler as POST}
