@@ -3,8 +3,7 @@
 import type { Metadata } from "next";
 import '@styles/globals.css';
 import Nav from "@components/Nav";
-import Provider from "@components/Provider";
-
+import AuthProvider from "@context/AuthProvider";
 
 export const metadata: Metadata = {
   title: "AI prompts",
@@ -19,22 +18,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       
-      <body className="app-body">
-        <Provider>
+      <AuthProvider>
 
-          <div className="main">
-            <div className="gradient">  </div>
-          </div>
+        <body className="app-body">
 
-          <main className="app">
+            <div className="main">
+              <div className="gradient">  </div>
+            </div>
 
-            <Nav/>
-            {children}
+            <main className="app">
 
-          </main>
+              <Nav/>
+              {children}
 
-        </Provider>
-      </body>
+            </main>
+
+        </body>
+      </AuthProvider>
 
     </html>
   );
